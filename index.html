@@ -2,39 +2,33 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Game</title>
 
 <style>
 html, body {
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  background: black;
   overflow: hidden;
+  background: black;
 }
 
+/* full screen container */
 .game-area {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* container that allows scaling */
-.scale-wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* zoom the actual game */
+/* THE IMPORTANT PART */
 iframe {
   border: none;
-  transform: scale(2);
-  transform-origin: center;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
 </head>
@@ -42,14 +36,11 @@ iframe {
 <body>
 
 <div class="game-area">
-  <div class="scale-wrapper">
-    <iframe 
-      src="https://riveratorresalejandro68-commits.github.io/dome_romantik/"
-      width="1200"
-      height="700"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe
+    src="https://riveratorresalejandro68-commits.github.io/dome_romantik/"
+    allowfullscreen
+    scrolling="no">
+  </iframe>
 </div>
 
 </body>
