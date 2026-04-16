@@ -2,59 +2,54 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="canonical" href="https://sites.google.com/view/alejandros-math-tutoring/dome-romantik-dome-keeper">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    touch-action: none;
-    -ms-touch-action: none;
-  }
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: black;
-  }
+.game-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* container that allows scaling */
+.scale-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .game-area {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  iframe {
-    width: 100vw;
-    height: 100vh;
-    border: none;
-    display: block;
-  }
+/* zoom the actual game */
+iframe {
+  border: none;
+  transform: scale(1.3);
+  transform-origin: center;
+}
 </style>
-
 </head>
 
 <body>
 
 <div class="game-area">
-  <iframe 
-    src="https://riveratorresalejandro68-commits.github.io/dome_romantik/"
-    scrolling="no"
-    allow="fullscreen; microphone"
-    allowfullscreen>
-  </iframe>
+  <div class="scale-wrapper">
+    <iframe 
+      src="https://riveratorresalejandro68-commits.github.io/dome_romantik/"
+      width="1200"
+      height="700"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
 
 </body>
